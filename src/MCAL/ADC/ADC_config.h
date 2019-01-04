@@ -1,0 +1,49 @@
+/*
+ * ADC_config.h
+ *
+ *  Created on: Oct 21, 2018
+ *      Author: MuhammadElzeiny
+ */
+
+#ifndef MCAL_ADC_ADC_CONFIG_H_
+#define MCAL_ADC_ADC_CONFIG_H_
+
+/*
+ * Select between
+ * ADC_VREF_AREF
+ * ADC_VREF_2.56
+ * ADC_VREF_AVCC
+ * */
+#define ADC_VREF_SOURCE_SELECTOR		ADC_VREF_AVCC
+
+
+
+/*
+ * choose prescaler between
+* ADC_PRESCALER_2
+* ADC_PRESCALER_4
+* ADC_PRESCALER_8
+* ADC_PRESCALER_16
+* ADC_PRESCALER_32
+* ADC_PRESCALER_64
+* ADC_PRESCALER_128
+ * */
+
+#define ADC_PRESCALER_SELECTOR			ADC_PRESCALER_64
+/*
+ * choose mode between
+ * ADC_MODE_SINGEL_CONVERSION
+ * ADC_MODE_AUTO_TRIGGER
+ * */
+
+#define ADC_MODE_SELECTOR			ADC_MODE_AUTO_TRIGGER
+#if ADC_MODE_SELECTOR == ADC_MODE_AUTO_TRIGGER
+/*
+ * choose between
+ * ADC_TRIGGER_FREE_RUNNING
+ * ADC_TRIGGER_EXTI
+ * */
+#define ADC_TRIGGER_TYPE			ADC_TRIGGER_FREE_RUNNING
+#endif
+
+#endif /* MCAL_ADC_ADC_CONFIG_H_ */
